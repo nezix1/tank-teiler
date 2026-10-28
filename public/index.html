@@ -42,10 +42,12 @@
       <section>
         <h2 data-i18n="car"></h2>
         <select id="carSel"></select>
+        <p id="carHint" class="hint" data-i18n="noCars" hidden></p>
+        <p class="hint" data-i18n="carStorage"></p>
         <div class="grid">
-          <label class="wide"><span data-i18n="name"></span><input id="cName"></label>
-          <label><span data-i18n="seats"></span><input id="cSeats" type="number" min="1" max="9"></label>
-          <label><span data-i18n="cons"></span><input id="cCons" type="number" step="0.1" min="0.1"></label>
+          <label class="wide"><span data-i18n="name"></span><input id="cName" maxlength="60" required data-i18n-ph="carNamePlaceholder"></label>
+          <label><span data-i18n="seats"></span><input id="cSeats" type="number" min="1" max="9" step="1" required placeholder="5"></label>
+          <label><span data-i18n="cons"></span><input id="cCons" type="number" step="0.1" min="0.1" max="40" required placeholder="6.0"></label>
           <label class="wide"><span data-i18n="fuel"></span>
             <select id="cFuel"><option value="95">Bleifrei 95</option><option value="98">Bleifrei 98</option><option value="diesel">Diesel</option></select></label>
         </div>

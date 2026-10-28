@@ -5,7 +5,7 @@ const T = {
   de: { tagline: 'Fahrtkosten berechnen und gerecht aufteilen.', presentation: 'Präsentation', route: 'Route', searchA: 'Start suchen oder auf Karte klicken', searchB: 'Ziel suchen oder auf Karte klicken',
     hint: 'Tipp: Klick auf die Karte setzt zuerst A, dann B. Für Stopps erst ein Feld auswählen. Pins lassen sich verschieben.', swap: 'A ⇄ B tauschen', reset: 'Zurücksetzen',
     addStop: '+ Stopp hinzufügen', stop: 'Stopp', stopPlaceholder: 'Zwischenstopp suchen oder Karte auswählen', removeStop: 'Stopp entfernen', moveUp: 'Nach oben', moveDown: 'Nach unten', completeStops: 'Bitte wähle für jeden Zwischenstopp einen Ort aus.', stopLimit: 'Maximal 25 Zwischenstopps sind möglich.',
-    car: 'Auto', name: 'Name', seats: 'Sitzplätze', cons: 'Verbrauch (L/100 km)', fuel: 'Treibstoff', save: 'Speichern', saveNew: 'Als neues Auto', del: 'Löschen',
+    car: 'Auto', noCars: 'Noch kein Auto gespeichert. Gib unten die Fahrzeugdaten ein und wähle „Auto hinzufügen“.', carStorage: 'Deine Autos werden nur in diesem Browser gespeichert.', selectCar: 'Auto auswählen', carNamePlaceholder: 'z. B. Mein Auto', addCar: 'Auto hinzufügen', name: 'Name', seats: 'Sitzplätze', cons: 'Verbrauch (L/100 km)', fuel: 'Treibstoff', save: 'Speichern', saveNew: 'Als neues Auto', del: 'Löschen',
     options: 'Fahrt', distance: 'Distanz (km)', pax: 'Personen', price: 'Preis (CHF/L)', parking: 'Parkkosten (CHF)', parkingHint: 'Parkkosten werden einmal pro Fahrt berechnet und auf alle Personen aufgeteilt.', fuelCost: 'Treibstoffkosten', round: 'Hin und zurück',
     perPerson: 'pro Person (aufgerundet)', total: 'Total', dist: 'Strecke', liters: 'Treibstoff', open: 'Google Maps', openApple: 'Apple Maps', appleStopsNote: 'Apple Maps öffnet Start und Ziel; Zwischenstopps sind im Google-Maps-Link enthalten.',
     loadingMap: 'Karte wird geladen …', noKey: 'Kein Google-Maps-Key gefunden. Trage ihn in die Datei .env ein (GOOGLE_MAPS_API_KEY). Die Distanz kannst du bis dahin manuell eingeben.',
@@ -15,7 +15,7 @@ const T = {
   en: { tagline: 'Calculate trip costs and split them fairly.', presentation: 'Presentation', route: 'Route', searchA: 'Search start or click on map', searchB: 'Search destination or click on map',
     hint: 'Tip: click the map to set A, then B. Select a stop field before choosing it on the map. Pins can be dragged.', swap: 'Swap A ⇄ B', reset: 'Reset',
     addStop: '+ Add stop', stop: 'Stop', stopPlaceholder: 'Search stop or choose on map', removeStop: 'Remove stop', moveUp: 'Move up', moveDown: 'Move down', completeStops: 'Choose a location for every stop.', stopLimit: 'You can add up to 25 stops.',
-    car: 'Car', name: 'Name', seats: 'Seats', cons: 'Consumption (L/100 km)', fuel: 'Fuel', save: 'Save', saveNew: 'Save as new', del: 'Delete',
+    car: 'Car', noCars: 'No car saved yet. Enter your car details below and choose “Add car”.', carStorage: 'Your cars are stored only in this browser.', selectCar: 'Select a car', carNamePlaceholder: 'e.g. My car', addCar: 'Add car', name: 'Name', seats: 'Seats', cons: 'Consumption (L/100 km)', fuel: 'Fuel', save: 'Save', saveNew: 'Save as new', del: 'Delete',
     options: 'Trip', distance: 'Distance (km)', pax: 'People', price: 'Price (CHF/L)', parking: 'Parking (CHF)', parkingHint: 'Parking is added once per trip and shared between all people.', fuelCost: 'Fuel costs', round: 'Round trip',
     perPerson: 'per person (rounded up)', total: 'Total', dist: 'Distance', liters: 'Fuel', open: 'Google Maps', openApple: 'Apple Maps', appleStopsNote: 'Apple Maps opens the start and destination; stops are included in the Google Maps link.',
     loadingMap: 'Loading map …', noKey: 'No Google Maps key found. Add it to the .env file (GOOGLE_MAPS_API_KEY). Until then you can enter the distance manually.',
@@ -25,7 +25,7 @@ const T = {
   ru: { tagline: 'Считай стоимость поездки и делите честно.', presentation: 'Презентация', route: 'Маршрут', searchA: 'Найти старт или клик по карте', searchB: 'Найти пункт назначения или клик по карте',
     hint: 'Подсказка: клик по карте ставит сначала A, затем B. Чтобы поставить остановку на карте, выберите её поле. Метки можно двигать.', swap: 'Поменять A ⇄ B', reset: 'Сбросить',
     addStop: '+ Добавить остановку', stop: 'Остановка', stopPlaceholder: 'Найти остановку или выбрать на карте', removeStop: 'Удалить остановку', moveUp: 'Переместить выше', moveDown: 'Переместить ниже', completeStops: 'Укажите место для каждой остановки.', stopLimit: 'Можно добавить не более 25 остановок.',
-    car: 'Машина', name: 'Название', seats: 'Места', cons: 'Расход (л/100 км)', fuel: 'Топливо', save: 'Сохранить', saveNew: 'Как новую', del: 'Удалить',
+    car: 'Машина', noCars: 'Машин пока нет. Введи данные своей машины и нажми «Добавить машину».', carStorage: 'Твои машины сохраняются только в этом браузере.', selectCar: 'Выбрать машину', carNamePlaceholder: 'например, Моя машина', addCar: 'Добавить машину', name: 'Название', seats: 'Места', cons: 'Расход (л/100 км)', fuel: 'Топливо', save: 'Сохранить', saveNew: 'Как новую', del: 'Удалить',
     options: 'Поездка', distance: 'Расстояние (км)', pax: 'Людей', price: 'Цена (CHF/л)', parking: 'Парковка (CHF)', parkingHint: 'Стоимость парковки учитывается один раз за поездку и делится между пассажирами.', fuelCost: 'Топливо', round: 'Туда и обратно',
     perPerson: 'с человека (округлено вверх)', total: 'Всего', dist: 'Дистанция', liters: 'Топливо', open: 'Google Maps', openApple: 'Apple Maps', appleStopsNote: 'Apple Maps откроет начало и конец маршрута; остановки есть в ссылке Google Maps.',
     loadingMap: 'Загрузка карты …', noKey: 'Ключ Google Maps не найден. Добавь его в файл .env (GOOGLE_MAPS_API_KEY). Пока можно ввести расстояние вручную.',
@@ -50,6 +50,7 @@ function applyLang() {
   document.querySelectorAll('[data-i18n]').forEach(el => el.textContent = t(el.dataset.i18n));
   document.querySelectorAll('[data-i18n-ph]').forEach(el => el.placeholder = t(el.dataset.i18nPh));
   $('#lang').value = state.lang;
+  updateCarControls();
   showPriceInfo();
   renderStops();
   renderNotice();
@@ -88,23 +89,53 @@ function renderNotice() {
   message.hidden = false;
 }
 
-// ---------- Autos (Backend-API) ----------
+// ---------- API-Anfragen an den Server ----------
 async function api(url, method = 'GET', body) {
   const r = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: body && JSON.stringify(body) });
   if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || r.status);
   return r.status === 204 ? null : r.json();
 }
 
+// ---------- Autos (lokal im Browser gespeichert) ----------
 async function loadCars(selectId) {
-  state.cars = await api('/api/cars');
-  $('#carSel').innerHTML = state.cars.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
-  if (selectId) $('#carSel').value = selectId;
+  const savedCars = localStorage.getItem('tankteiler.cars');
+  state.cars = savedCars ? JSON.parse(savedCars) : [];
+  if (!Array.isArray(state.cars) || state.cars.some(car =>
+    !car || !Number.isInteger(car.id) || typeof car.name !== 'string' || !car.name.trim()
+    || !Number.isInteger(car.seats) || car.seats < 1 || car.seats > 9
+    || !Number.isFinite(car.consumption) || car.consumption <= 0 || car.consumption > 40
+    || !['95', '98', 'diesel'].includes(car.fuel))) {
+    throw new Error('Stored car data is invalid.');
+  }
+  const select = $('#carSel');
+  select.replaceChildren(new Option(t('selectCar'), '', true, true));
+  state.cars.forEach(car => select.add(new Option(car.name, car.id)));
+  const preferredId = selectId && state.cars.some(c => c.id == selectId) ? selectId : state.cars[0]?.id;
+  select.value = preferredId || '';
+  updateCarControls();
   fillEditor();
+}
+
+function updateCarControls() {
+  const hasCars = state.cars.length > 0;
+  $('#carHint').hidden = hasCars;
+  $('#save').textContent = t(hasCars ? 'save' : 'addCar');
+  $('#saveNew').hidden = !hasCars;
+  $('#del').disabled = !hasCars;
 }
 
 function fillEditor() {
   const c = state.cars.find(c => c.id == $('#carSel').value);
-  if (!c) return;
+  if (!c) {
+    $('#cName').value = '';
+    $('#cSeats').value = '';
+    $('#cCons').value = '';
+    $('#pax').value = 1;
+    $('#cFuel').value = '95';
+    setPriceFromFuel();
+    calc();
+    return;
+  }
   $('#cName').value = c.name; $('#cSeats').value = c.seats; $('#cCons').value = c.consumption; $('#cFuel').value = c.fuel;
   $('#pax').value = c.seats;
   setPriceFromFuel();
@@ -115,9 +146,17 @@ const carFromForm = () => ({ name: $('#cName').value, seats: +$('#cSeats').value
 
 async function saveCar(asNew) {
   try {
+    $('#cName').value = $('#cName').value.trim();
     const car = carFromForm();
     const id = $('#carSel').value;
-    const saved = asNew || !id ? await api('/api/cars', 'POST', car) : await api('/api/cars/' + id, 'PUT', car);
+    if (!$('#cName').reportValidity() || !$('#cSeats').reportValidity() || !$('#cCons').reportValidity()) return;
+    const saved = asNew || !id
+      ? { ...car, id: Math.max(0, ...state.cars.map(existing => existing.id)) + 1 }
+      : { ...car, id: Number(id) };
+    const nextCars = asNew || !id
+      ? [...state.cars, saved]
+      : state.cars.map(existing => existing.id === saved.id ? saved : existing);
+    localStorage.setItem('tankteiler.cars', JSON.stringify(nextCars));
     await loadCars(saved.id);
     say('saved', 'success');
   } catch (e) { say('requestError', 'error', e.message); }
@@ -470,9 +509,10 @@ function init() {
   $('#saveNew').onclick = () => saveCar(true);
   $('#del').onclick = async () => {
     const id = $('#carSel').value;
-    if (id && state.cars.length > 1) {
+    if (id) {
       try {
-        await api('/api/cars/' + id, 'DELETE');
+        const remainingCars = state.cars.filter(car => car.id !== Number(id));
+        localStorage.setItem('tankteiler.cars', JSON.stringify(remainingCars));
         await loadCars();
         say('deleted', 'success');
       } catch (e) {
@@ -507,7 +547,7 @@ function init() {
 
   applyLang();
   api('/api/prices').then(p => { state.prices = p; setPriceFromFuel(); showPriceInfo(); calc(); });
-  loadCars();
+  loadCars().catch(e => say('requestError', 'error', e.message));
   loadMapsScript();
 }
 init();

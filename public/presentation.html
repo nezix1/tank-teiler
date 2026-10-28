@@ -67,7 +67,7 @@
         <p class="section-lead">TankTeiler verbindet Route, Auto und Mitfahrende zu einer verständlichen Rechnung.</p></div>
       <div class="flow">
         <article class="flow-step"><span class="step-index">01</span><div class="flow-icon blue">⌖</div><h3>Route festlegen</h3><p>Start, Ziel und beliebig angeordnete Stopps auswählen.</p><span class="flow-arrow">→</span></article>
-        <article class="flow-step"><span class="step-index">02</span><div class="flow-icon yellow">▰</div><h3>Auto auswählen</h3><p>Verbrauch, Treibstoff und Preis bestimmen die Kosten.</p><span class="flow-arrow">→</span></article>
+        <article class="flow-step"><span class="step-index">02</span><div class="flow-icon yellow">▰</div><h3>Auto eintragen</h3><p>Eigenes Auto mit Verbrauch und Treibstoff speichern.</p><span class="flow-arrow">→</span></article>
         <article class="flow-step"><span class="step-index">03</span><div class="flow-icon green">÷</div><h3>Kosten teilen</h3><p>Die Gesamtkosten werden durch die Personen geteilt.</p></article>
       </div>
       <div class="formula-card">
@@ -103,9 +103,9 @@
       <div class="architecture">
         <article class="architecture-card frontend-card"><span class="layer-label">01 · WAS DU SIEHST</span><div class="layer-icon">▣</div><h3>Die Web-App</h3><p>Formular, Karte, Sprache und Ergebnis. Sie nimmt Eingaben entgegen und zeigt die Antwort.</p><div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
         <div class="architecture-connector"><span>↔</span><small>fragt an<br>und erhält Daten</small></div>
-        <article class="architecture-card backend-card"><span class="layer-label">02 · DER VERMITTLER</span><div class="layer-icon">⌘</div><h3>Der Server</h3><p>Verarbeitet Anfragen, prüft Fahrzeugdaten und verbindet App und Datenspeicher.</p><div class="tech-tags"><span>Node.js</span><span>Express</span></div></article>
-        <div class="architecture-connector"><span>↔</span><small>liest<br>und speichert</small></div>
-        <article class="architecture-card data-card"><span class="layer-label">03 · DAS GEDÄCHTNIS</span><div class="layer-icon">▤</div><h3>Die Datenbank</h3><p>Gespeicherte Autos bleiben auch nach dem Neuladen der Seite erhalten.</p><div class="tech-tags"><span>SQLite</span><span>lokale Datei</span></div></article>
+        <article class="architecture-card backend-card"><span class="layer-label">02 · DEIN BROWSER</span><div class="layer-icon">▤</div><h3>Dein Speicher</h3><p>Deine Autos bleiben in diesem Browser gespeichert und werden nicht an andere Nutzer weitergegeben.</p><div class="tech-tags"><span>localStorage</span><span>auf deinem Gerät</span></div></article>
+        <div class="architecture-connector"><span>↔</span><small>fragt Preise ab<br>und erhält Daten</small></div>
+        <article class="architecture-card data-card"><span class="layer-label">03 · DER SERVER</span><div class="layer-icon">⌘</div><h3>Der Vermittler</h3><p>Der Server lädt Treibstoffpreise und stellt die Google-Maps-Konfiguration bereit.</p><div class="tech-tags"><span>Node.js</span><span>Express</span></div></article>
       </div>
       <div class="external-services"><span class="external-label">EXTERNE DATEN & DIENSTE</span><span class="service-pill"><i class="service-mark maps-mark">G</i> Google Maps · Route & Karte</span><span class="service-pill"><i class="service-mark price-mark">CHF</i> TCS · Treibstoffpreise</span></div>
     </section>
@@ -157,7 +157,7 @@
 <span class="code-muted">// Distanz und Linienpunkte kommen zurück</span></code></pre></article>
         <aside class="api-key-note"><span class="key-icon">🔑</span><div><strong>Der Schlüssel ist kein Geheimnis im Browser</strong><p>Der Maps-Schlüssel wird von der Webseite genutzt. Deshalb wird er in Google Cloud auf erlaubte Webseiten und APIs beschränkt. Er enthält keine Adressen — er ordnet die Nutzung dem eigenen Projekt zu.</p></div></aside>
       </div>
-      <p class="small-print">Die Anfrage geht vom Browser an Google Maps. Die Kostenformel läuft danach im Browser; Fahrzeugdaten werden separat über unseren Server gespeichert.</p>
+      <p class="small-print">Die Anfrage geht vom Browser an Google Maps. Die Kostenformel läuft danach im Browser; deine Fahrzeugdaten bleiben im lokalen Speicher deines Browsers.</p>
     </section>
 
     <section class="slide" aria-label="Zuverlässigkeit und Datenschutz">
@@ -165,7 +165,7 @@
       <div class="reliability-grid">
         <article class="reliability-card"><span class="reliability-icon">↻</span><div><h3>Preise nicht bei jedem Klick neu laden</h3><p>Der Server hält abgerufene Treibstoffpreise eine Zeit lang im Zwischenspeicher. Wenn der Abruf fehlschlägt, steht ein Ersatzwert bereit.</p></div></article>
         <article class="reliability-card"><span class="reliability-icon">✓</span><div><h3>Eingaben werden geprüft</h3><p>Zum Beispiel: Sitzplätze und Verbrauch müssen plausible Werte haben, bevor ein Auto gespeichert wird.</p></div></article>
-        <article class="reliability-card"><span class="reliability-icon">▣</span><div><h3>Autos bleiben gespeichert</h3><p>Die Fahrzeugdaten werden in einer lokalen SQLite-Datei abgelegt — nicht nur im sichtbaren Formular.</p></div></article>
+        <article class="reliability-card"><span class="reliability-icon">▣</span><div><h3>Autos bleiben privat</h3><p>Deine Fahrzeugdaten liegen im Browser-Speicher auf deinem Gerät, nicht in einer gemeinsamen Server-Datenbank.</p></div></article>
         <article class="reliability-card"><span class="reliability-icon">◎</span><div><h3>Die App bleibt leichtgewichtig</h3><p>Das Frontend verwendet normales HTML, CSS und JavaScript, ohne großes UI-Framework.</p></div></article>
       </div>
       <p class="small-print">Die Karte und Routenberechnung benötigen eine Internetverbindung und korrekt eingerichtete Google-Maps-APIs.</p>

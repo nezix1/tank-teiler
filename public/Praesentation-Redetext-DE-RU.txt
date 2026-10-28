@@ -65,7 +65,9 @@ FOLIE 3 — SO FUNKTIONIERT TANKTEILER | etwa 1 Minute
 DEUTSCH
 Der Ablauf ist einfach. Zuerst legen wir Start und Ziel fest. Zusätzliche
 Zwischenstopps können wir hinzufügen, entfernen und in der Reihenfolge ändern.
-Dann wählen wir ein Auto und geben an, wie viele Personen mitfahren.
+Dann tragen wir unser eigenes Auto ein — zum Beispiel Name, Sitzplätze,
+Verbrauch und Treibstoffart — und speichern es. Danach geben wir an, wie viele
+Personen mitfahren.
 
 Die App verwendet die Streckenlänge, den Verbrauch des Autos und den
 Treibstoffpreis. Eine Parkgebühr kann einmal zur Fahrt addiert werden. Zum
@@ -74,8 +76,9 @@ Die Rechnung bleibt dabei sichtbar und nachvollziehbar.
 
 РУССКИЙ ПЕРЕВОД
 Процесс простой. Сначала задаём начало и конец маршрута. Дополнительные
-остановки можно добавлять, удалять и менять их порядок. Затем выбираем машину
-и указываем количество пассажиров.
+остановки можно добавлять, удалять и менять их порядок. Затем добавляем свою
+машину: указываем название, количество мест, расход и тип топлива — и
+сохраняем её. После этого указываем количество пассажиров.
 
 Приложение использует длину маршрута, расход топлива автомобиля и цену топлива.
 К поездке можно один раз прибавить стоимость парковки. В конце TankTeiler
@@ -92,9 +95,10 @@ oder auf der Karte auswählen. Die Markierungen lassen sich verschieben. Über
 „Stopp hinzufügen“ kann ich eine Zwischenstation einfügen und ihre Position
 ändern.
 
-Im Bereich „Auto“ wähle ich ein Fahrzeug und sehe zum Beispiel Verbrauch und
-Treibstoffart. Bei der Fahrt kann ich die Distanz, die Zahl der Personen, den
-Treibstoffpreis und die Parkgebühr einstellen. Die Option „Hin und zurück“
+Im Bereich „Auto“ trage ich mein Fahrzeug ein: Name, Sitzplätze, Verbrauch und
+Treibstoffart. Danach speichere ich es. Bei der Fahrt kann ich die Distanz, die
+Zahl der Personen, den Treibstoffpreis und die Parkgebühr einstellen. Die Option
+„Hin und zurück“
 verdoppelt die Strecke für die Treibstoffrechnung; die Parkgebühr wird weiterhin
 nur einmal angesetzt.
 
@@ -108,9 +112,9 @@ Stopp und prüfe anschließend die neue Kostenaufteilung.
 выбрать на карте. Метки можно перемещать. Кнопка добавления остановки позволяет
 вставить промежуточную точку и изменить её положение в маршруте.
 
-В разделе автомобиля можно выбрать машину и посмотреть, например, расход и
-тип топлива. В параметрах поездки можно указать расстояние, число пассажиров,
-цену топлива и парковку. Режим «туда и обратно» удваивает расстояние для
+В разделе машины я ввожу данные своего автомобиля: название, количество мест,
+расход и тип топлива, а затем сохраняю его. В параметрах поездки можно указать
+расстояние, число пассажиров, цену топлива и парковку. Режим «туда и обратно» удваивает расстояние для
 расчёта топлива, а парковка по-прежнему учитывается только один раз.
 
 В результате отдельно показаны общая сумма, топливо, парковка, расстояние и
@@ -125,24 +129,24 @@ FOLIE 5 — WAS IM HINTERGRUND PASSIERT | etwa 1 Minute
 DEUTSCH
 Man kann TankTeiler mit einem kleinen Team vergleichen. Die Webseite ist der
 Teil, den wir sehen: Sie zeigt das Formular, die Karte und das Ergebnis. Der
-Server nimmt Anfragen entgegen und erledigt Aufgaben, für die die Webseite
-einen Vermittler braucht. Eine SQLite-Datenbank speichert die Fahrzeugdaten.
+Fahrzeugdaten werden nur im Speicher dieses Browsers abgelegt. Der Server
+vermittelt bei Preisen und der Google-Maps-Konfiguration.
 
 Für Karte, Ortsuche und Routenplanung nutzt die App Google Maps. Treibstoffpreise
 werden beim TCS abgerufen. Jeder Teil hat also eine eigene Aufgabe: Die
-Webseite zeigt, der Server vermittelt, die Datenbank speichert und externe
-Dienste liefern Karten- oder Preisinformationen.
+Webseite zeigt und rechnet, der Browser speichert das eigene Auto, der Server
+vermittelt und externe Dienste liefern Karten- oder Preisinformationen.
 
 РУССКИЙ ПЕРЕВОД
 TankTeiler можно представить как небольшую команду. Веб-страница — это то,
-что мы видим: форму, карту и результат. Сервер принимает запросы и выполняет
-задачи, для которых странице нужен посредник. База SQLite хранит данные
-автомобилей.
+что мы видим: форму, карту и результат. Данные автомобиля сохраняются только
+в хранилище этого браузера. Сервер помогает получать цены на топливо и
+настройки Google Maps.
 
 Для карты, поиска мест и построения маршрута приложение использует Google
 Maps. Цены на топливо загружаются с TCS. У каждой части своя роль: страница
-показывает информацию, сервер связывает части, база хранит данные, а внешние
-сервисы предоставляют карту и цены.
+показывает информацию и считает расходы, браузер хранит машину, сервер
+связывает части, а внешние сервисы предоставляют карту и цены.
 
 ======================================================================
 FOLIE 6 — SO WERDEN DIE KOSTEN BERECHNET | etwa 1 Minute
@@ -211,23 +215,23 @@ FOLIE 8 — WAS GESPEICHERT UND GEPRÜFT WIRD | etwa 1 Minute
 ======================================================================
 
 DEUTSCH
-Fahrzeugangaben werden geprüft, bevor sie gespeichert werden. Die Treibstoff-
+Fahrzeugangaben werden geprüft, bevor sie im Browser gespeichert werden. Die Treibstoff-
 preise werden zwischengespeichert, damit der Server sie nicht bei jeder
 Änderung erneut abrufen muss. Wenn der Preis-Dienst vorübergehend nicht
 erreichbar ist, steht ein Ersatzwert bereit.
 
 Für die Veröffentlichung habe ich Render verwendet. TankTeiler braucht nicht
-nur eine Webseite, sondern auch einen laufenden Node.js-Server für die
-Fahrzeugdaten und Preise. GitHub Pages kann HTML, CSS und JavaScript als
-statische Seite ausliefern, führt aber keinen Express-Server und keine
-SQLite-Datenbank aus. Render kann Webseite und Server gemeinsam unter einer
+nur eine Webseite, sondern auch einen laufenden Node.js-Server für Preise und
+Google-Maps-Konfiguration. GitHub Pages kann HTML, CSS und JavaScript als
+statische Seite ausliefern, führt aber keinen Express-Server aus. Render kann
+Webseite und Server gemeinsam unter einer
 Adresse betreiben. Dadurch kann auch der QR-Code auf der letzten Folie direkt
 zur funktionierenden Demo führen.
 
 Die Demo nutzt den kostenlosen Render-Tarif. Nach einer längeren Pause kann
 der Server schlafen und beim nächsten Aufruf kurz zum Aufwachen brauchen. Die
-lokale SQLite-Datei ist dort nicht als dauerhafte Datenspeicherung gedacht;
-gespeicherte Änderungen können nach einem Neustart verloren gehen.
+Fahrzeugdaten bleiben unabhängig vom Server-Neustart in diesem Browser
+gespeichert.
 
 РУССКИЙ ПЕРЕВОД
 Данные автомобиля проверяются перед сохранением. Цены на топливо кэшируются,
@@ -235,16 +239,16 @@ gespeicherte Änderungen können nach einem Neustart verloren gehen.
 сервис с ценами временно недоступен, приложение использует запасное значение.
 
 Для публикации я выбрал Render. TankTeiler нужна не только веб-страница, но и
-работающий сервер Node.js для данных автомобилей и цен. GitHub Pages может
-публиковать статические HTML, CSS и JavaScript, но не запускает Express-сервер
-и базу SQLite. Render позволяет разместить страницу и сервер вместе по одному
+работающий сервер Node.js для цен на топливо и настроек Google Maps. GitHub
+Pages может публиковать статические HTML, CSS и JavaScript, но не запускает
+Express-сервер. Render позволяет разместить страницу и сервер вместе по одному
 адресу. Поэтому QR-код на последнем слайде сразу ведёт на работающую демо-
 версию.
 
 Демо использует бесплатный тариф Render. После долгого бездействия сервер может
 «уснуть», и при первом открытии ему может потребоваться время на запуск.
-Локальный файл SQLite там не предназначен для постоянного хранения; изменения
-могут потеряться после перезапуска.
+Данные автомобилей хранятся отдельно в браузере пользователя и не зависят от
+перезапуска сервера.
 
 ======================================================================
 FOLIE 9 — ABSCHLUSS UND QR-CODE | etwa 30 Sekunden
