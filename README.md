@@ -1,82 +1,45 @@
 # TankTeiler
 
-**Split shared trip costs fairly.**
+**Plan a shared car trip. Split the costs fairly.**
 
-TankTeiler is a small, multilingual web app for planning a shared car trip and
-estimating each passenger's share of the costs. Add a route and stops, choose a
-car, enter the fuel and parking costs, and see the breakdown.
+TankTeiler is a web app that estimates fuel and parking costs for a shared
+journey and shows each passenger's share.
 
-## Features
+Try it: **[tankteiler.onrender.com](https://tankteiler.onrender.com/)**
 
-- Google Maps route planning with draggable start and destination markers
-- Add, remove, and reorder intermediate stops
-- Estimate fuel use and split fuel and parking costs between passengers
-- Open the route in Google Maps or Apple Maps
-- Save and edit vehicle details
-- German, English, and Russian interface
-- Responsive layout and presentation page
+## How it works
 
-## Built with
+1. Choose a starting point, destination, and any stops along the way.
+2. Select a car and enter the number of people travelling.
+3. TankTeiler gets the route distance from Google Maps and estimates the fuel
+   needed from the car's consumption.
+4. It adds any parking fee and divides the total by the number of passengers.
+5. Open the route in Google Maps or Apple Maps.
 
-- Frontend: HTML, CSS, and vanilla JavaScript
-- Backend: Node.js and Express
-- Vehicle storage: SQLite (`better-sqlite3`)
-- Maps and route planning: Google Maps JavaScript API and Routes API
-- Fuel prices: TCS
+The app also lets you save vehicle details and use the interface in German,
+English, or Russian.
 
-## Run locally
+## The calculation
 
-Use Node.js 18 or newer.
-
-```sh
-npm ci
-cp .env.example .env
+```text
+fuel needed = distance × fuel consumption ÷ 100
+trip cost   = fuel needed × price per litre + parking
+per person  = trip cost ÷ passengers
 ```
 
-Add a Google Maps API key to `.env`. Enable the **Maps JavaScript API**,
-**Routes API**, and **Geocoding API** in Google Cloud. Restrict the key to the
-websites that will use it and to the APIs the app needs.
+The result is an estimate based on the values entered; it does not include
+other possible costs such as tolls.
 
-```sh
-npm start
-```
+## Why Render?
 
-Open [http://localhost:3000](http://localhost:3000). The presentation is at
-`/presentation`, and the German/Russian speaker notes are available at
-`/speech`.
+TankTeiler needs a small server to provide vehicle storage and fuel-price data.
+GitHub Pages hosts static websites, but cannot run that server. Render runs the
+web app and its server together, so the demo works from one link.
 
-The app reads and writes vehicle information to `tankteiler.db` in the project
-directory. The database and `.env` file are intentionally excluded from Git.
+## Technology
 
-## Deploy a live demo
+HTML, CSS, and JavaScript · Node.js and Express · SQLite · Google Maps
 
-GitHub Pages publishes static files; it does not run the Express server or
-SQLite database. TankTeiler needs its server for vehicle storage, fuel prices,
-and Maps configuration, so publishing the `public` folder to GitHub Pages alone
-will **not** make the complete app work.
+## Project
 
-The included `render.yaml` deploys the complete app as one Node.js web service
-on Render:
-
-1. Push this repository to GitHub.
-2. In Render, choose **New → Blueprint** and connect this repository.
-3. Add the `GOOGLE_MAPS_API_KEY` environment variable when prompted.
-4. Deploy the Blueprint and open the `.onrender.com` address Render assigns.
-
-The frontend and API share the same origin, so no separate CORS setup is
-needed. The presentation's final slide generates its QR code from the deployed
-site's current address; it only shows the code on a hosted site, not on
-`localhost`.
-
-The Blueprint uses Render's free service plan. Free instances can sleep while
-idle, and their local filesystem is temporary, so saved vehicle changes and
-SQLite data may reset after a restart or redeploy. For persistent data, use a
-host with persistent storage or move vehicle storage to a managed database.
-
-Never commit `.env`, API credentials, or the SQLite database. A Maps key used
-in a browser is visible to visitors; protect it with HTTP-referrer and API
-restrictions in Google Cloud.
-
-## Repository
-
-GitHub repository: [nezix1/tank-teiler](https://github.com/nezix1/tank-teiler)
+Created by [Illia Honcharov](https://github.com/nezix1).

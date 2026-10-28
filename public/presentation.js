@@ -4,7 +4,11 @@ const totalLabel = document.querySelector('#total');
 const progress = document.querySelector('#progress');
 const previous = document.querySelector('#prev');
 const next = document.querySelector('#next');
+const demoQr = document.querySelector('#demo-qr');
+const demoQrCode = document.querySelector('#demo-qr-code');
+const canShareDemo = !['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
 let currentIndex = 0;
+let demoQrReady = false;
 
 totalLabel.textContent = String(slides.length).padStart(2, '0');
 
@@ -12,24 +16,6 @@ function showSlide(index) {
   currentIndex = Math.max(0, Math.min(slides.length - 1, index));
   slides[currentIndex].scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   updateControls();
-
-  const demoQr = document.querySelector('#demo-qr');
-  const demoUrl = window.location.origin;
-  if (!['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)) {
-    if (typeof QRCode === 'undefined') {
-      console.error('Could not generate the demo QR code: QRCode library did not load.');
-    } else {
-      new QRCode(document.querySelector('#demo-qr-code'), {
-        text: demoUrl,
-        width: 220,
-        height: 220,
-        colorDark: '#0b1420',
-        colorLight: '#ffffff',
-        correctLevel: QRCode.CorrectLevel.H,
-      });
-      demoQr.hidden = false;
-    }
-  }
 }
 
 function updateControls() {
@@ -37,6 +23,25 @@ function updateControls() {
   progress.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
   previous.disabled = currentIndex === 0;
   next.disabled = currentIndex === slides.length - 1;
+  demoQr.hidden = !canShareDemo || !demoQrReady || currentIndex !== slides.length - 1;
+}
+
+function createDemoQr() {
+  if (!canShareDemo || demoQrReady) return;
+  if (typeof QRCode === 'undefined') {
+    console.error('Could not generate the demo QR code: QRCode library did not load.');
+    return;
+  }
+
+  new QRCode(demoQrCode, {
+    text: `${window.location.origin}/`,
+    width: 220,
+    height: 220,
+    colorDark: '#0b1420',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.H,
+  });
+  demoQrReady = true;
 }
 
 previous.addEventListener('click', () => showSlide(currentIndex - 1));
@@ -69,4 +74,5 @@ document.addEventListener('keydown', event => {
   }
 });
 
+createDemoQr();
 updateControls();

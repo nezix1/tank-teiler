@@ -1,282 +1,268 @@
-TANKTEILER — REDETEXTPULT | DEUTSCH + RUSSISCH
+TANKTEILER — VORTRAGSTEXT
 Deutsch mit russischer Übersetzung
-Geplante Dauer: ca. 10–12 Minuten inklusive kurzer Live-Demo
+Geplante Redezeit: etwa 10–12 Minuten inklusive kurzer Live-Demo
 
-HINWEIS ZUM VORTRAG
-Die Präsentation läuft unter /presentation. Mit den Pfeiltasten oder der
-Leertaste geht es zur nächsten Folie. Für die Live-Demo auf „Live-Demo“ klicken.
-Die Abschnitte „Deutsch“ sind der Vortragstext. Die russischen Abschnitte sind
-die Übersetzung zur Vorbereitung.
+VOR DEM VORTRAG
+Die Präsentation öffnen: https://tankteiler.onrender.com/presentation
+Mit ← / → oder der Leertaste wechseln Sie die Folien.
+Auf der letzten Folie können die Zuhörer den QR-Code scannen und die App öffnen.
+Die Rede ist zuerst auf Deutsch, danach folgt jeweils die russische Übersetzung.
 
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 1 — TITEL | ca. 1 Minute
-──────────────────────────────────────────────────────────────────────────────
-
-DEUTSCH
-Guten Tag zusammen. Ich möchte heute TankTeiler vorstellen. Das ist eine kleine
-Web-App für eine Situation, die viele kennen: Wir fahren gemeinsam irgendwohin,
-eine Person bezahlt den Treibstoff, und am Ende stellt sich die Frage: Wie teilen
-wir die Kosten fair auf?
-
-TankTeiler soll diese Frage einfach und transparent beantworten. Man gibt eine
-Route, ein Auto und die Anzahl der Mitfahrenden an. Die App berechnet daraus
-einen verständlichen Betrag pro Person. Ich zeige zuerst das Problem, dann die
-Lösung und zum Schluss kurz, was im Hintergrund passiert — ohne dass man dafür
-programmieren können muss.
-
-РУССКИЙ ПЕРЕВОД
-Всем добрый день. Сегодня я хочу представить TankTeiler — небольшое веб-
-приложение для знакомой многим ситуации: мы едем куда-то вместе, один человек
-оплачивает топливо, и в конце возникает вопрос: как справедливо разделить
-расходы?
-
-TankTeiler помогает просто и прозрачно ответить на этот вопрос. Нужно указать
-маршрут, автомобиль и количество пассажиров. Приложение рассчитывает понятную
-сумму на человека. Сначала я расскажу о проблеме, затем покажу решение и в
-конце кратко объясню, что происходит внутри — без необходимости уметь
-программировать.
-
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 2 — DAS PROBLEM | ca. 1 Minute
-──────────────────────────────────────────────────────────────────────────────
+======================================================================
+FOLIE 1 — TITEL | etwa 1 Minute
+======================================================================
 
 DEUTSCH
-Eine gemeinsame Fahrt klingt zunächst einfach. In der Praxis hängen die Kosten
-aber von mehreren Dingen ab: Wie lang ist die Strecke? Gibt es Zwischenstopps?
-Wie viel verbraucht das Auto? Was kostet der Treibstoff? Und wie viele Personen
-teilen sich die Fahrt?
+Guten Tag zusammen. Ich möchte Ihnen heute TankTeiler vorstellen. Die Idee
+entstand aus einer alltäglichen Frage: Wenn mehrere Personen gemeinsam fahren,
+wie teilen wir die Kosten so auf, dass es für alle verständlich und fair ist?
 
-Wenn man das alles im Kopf oder mit einem Taschenrechner zusammenrechnet,
-übersieht man leicht etwas. Außerdem ist das Ergebnis für die anderen nicht
-immer nachvollziehbar. Genau hier setzt die App an: Sie bringt diese Angaben an
-einem Ort zusammen und zeigt, wie die Aufteilung zustande kommt.
+TankTeiler ist eine kleine Web-App dafür. Wir geben die Strecke, das Auto und
+die Zahl der Mitfahrenden ein. Die App schätzt die Treibstoffkosten, kann
+Parkkosten berücksichtigen und zeigt den Anteil pro Person. Ich stelle zuerst
+die Idee vor, zeige die Anwendung und erkläre anschließend in einfachen Worten,
+was im Hintergrund passiert.
 
 РУССКИЙ ПЕРЕВОД
-На первый взгляд совместная поездка кажется простой. Но стоимость зависит от
-нескольких факторов: какова длина маршрута? Есть ли остановки? Сколько
-потребляет автомобиль? Сколько стоит топливо? И на скольких пассажиров делятся
-расходы?
+Всем добрый день. Сегодня я хочу представить TankTeiler. Идея возникла из
+обычного вопроса: если несколько человек едут вместе, как разделить расходы
+понятно и справедливо для всех?
 
-Если считать всё в уме или на калькуляторе, легко что-то упустить. К тому же
-результат не всегда понятен остальным. Приложение решает эту задачу: собирает
-все данные в одном месте и показывает, откуда берётся сумма.
+TankTeiler — небольшое веб-приложение для этой задачи. Мы указываем маршрут,
+автомобиль и число пассажиров. Приложение оценивает стоимость топлива, при
+необходимости учитывает парковку и показывает долю каждого человека. Сначала
+я расскажу об идее, покажу приложение, а затем простыми словами объясню, что
+происходит внутри.
 
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 3 — DIE LÖSUNG | ca. 1 Minute
-──────────────────────────────────────────────────────────────────────────────
+======================================================================
+FOLIE 2 — DAS PROBLEM | etwa 1 Minute
+======================================================================
 
 DEUTSCH
-Der Ablauf besteht aus drei Schritten. Erstens wählen wir Start und Ziel auf der
-Karte oder suchen sie über den Namen. Wenn jemand unterwegs abgeholt wird,
-können wir zusätzliche Stopps einfügen und ihre Reihenfolge ändern. Die Route
-wird dann neu berechnet.
+Eine gemeinsame Fahrt ist schnell organisiert. Die Abrechnung ist oft weniger
+einfach. Die Strecke kann länger werden, unterwegs kommen Stopps dazu, und jedes
+Auto verbraucht unterschiedlich viel. Dazu kommen der Treibstoffpreis, die
+Parkgebühr und die Frage, wie viele Personen sich die Kosten teilen.
 
-Zweitens wählen wir ein Auto. Dazu gehören Verbrauch, Treibstoffart und
-Treibstoffpreis. Drittens geben wir an, wie viele Personen mitfahren. Die App
-berechnet zunächst die geschätzten Treibstoffkosten für die gesamte Fahrt und
-teilt sie anschließend durch die Zahl der Mitfahrenden. So bleibt die Rechnung
-einfach zu erklären.
+Wenn wir alles im Kopf berechnen, ist ein Fehler schnell passiert. Und eine
+einzige Endsumme erklärt nicht, wie sie zustande kommt. TankTeiler bringt diese
+Angaben zusammen und macht die Rechnung für alle sichtbar.
 
 РУССКИЙ ПЕРЕВОД
-Процесс состоит из трёх шагов. Сначала указываем начальную и конечную точки на
-карте или ищем их по названию. Если нужно кого-то забрать по пути, можно
-добавить остановки и поменять их порядок. После этого маршрут пересчитывается.
+Совместную поездку легко организовать, но разделить расходы бывает сложнее.
+Маршрут может стать длиннее, по пути появляются остановки, а разные автомобили
+расходуют разное количество топлива. Нужно учитывать цену топлива, парковку и
+число людей, между которыми делятся расходы.
 
-Затем выбираем автомобиль. Для расчёта нужны расход топлива, его тип и цена.
-Наконец, указываем количество пассажиров. Приложение рассчитывает примерную
-стоимость топлива за всю поездку и делит её на число пассажиров. Такой расчёт
-легко объяснить.
+Если считать всё в уме, легко ошибиться. А одна итоговая сумма не объясняет,
+как она получилась. TankTeiler собирает эти данные вместе и делает расчёт
+понятным для всех.
 
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 4 — DIE LIVE-APP | ca. 2 Minuten — LIVE-DEMO
-──────────────────────────────────────────────────────────────────────────────
+======================================================================
+FOLIE 3 — SO FUNKTIONIERT TANKTEILER | etwa 1 Minute
+======================================================================
 
 DEUTSCH
-Hier sehen Sie die eigentliche Anwendung. Auf der Karte kann ich zwei Punkte
-setzen; alternativ suche ich einen Ort. Ich kann die Markierungen verschieben,
-eine Zwischenstation hinzufügen und sie nach oben oder unten sortieren.
+Der Ablauf ist einfach. Zuerst legen wir Start und Ziel fest. Zusätzliche
+Zwischenstopps können wir hinzufügen, entfernen und in der Reihenfolge ändern.
+Dann wählen wir ein Auto und geben an, wie viele Personen mitfahren.
 
-Daneben wähle ich ein Auto und stelle bei Bedarf die Zahl der Mitfahrenden, den
-Treibstoffpreis oder zusätzliche Parkkosten ein. Das Ergebnis zeigt nicht nur
-den Betrag pro Person, sondern auch Strecke, Verbrauch und Kosten. Google Maps
-öffnet die Route inklusive Stopps; Apple Maps öffnet die Strecke zwischen Start
-und Ziel.
-
-Für die Demonstration wähle ich jetzt beispielhaft Start und Ziel aus und füge
-eine Zwischenstation hinzu. Danach ändere ich ihre Reihenfolge. Man sieht:
-Route und Distanz werden aktualisiert. Die Zahlen hängen natürlich von der
-gewählten Strecke, dem Fahrzeug und dem eingetragenen Preis ab; es handelt sich
-um eine nachvollziehbare Schätzung der Treibstoff- und Parkkosten, nicht um eine
-Rechnung für alle denkbaren Fahrtkosten. Die Parkgebühr wird einmal addiert und
-auf alle Mitfahrenden aufgeteilt.
+Die App verwendet die Streckenlänge, den Verbrauch des Autos und den
+Treibstoffpreis. Eine Parkgebühr kann einmal zur Fahrt addiert werden. Zum
+Schluss teilt TankTeiler die geschätzten Gesamtkosten durch die Personenzahl.
+Die Rechnung bleibt dabei sichtbar und nachvollziehbar.
 
 РУССКИЙ ПЕРЕВОД
-Перед вами само приложение. На карте можно указать две точки или найти место
-через поиск. Метки можно перемещать, а промежуточную остановку — добавлять,
-удалять и менять её порядок.
+Процесс простой. Сначала задаём начало и конец маршрута. Дополнительные
+остановки можно добавлять, удалять и менять их порядок. Затем выбираем машину
+и указываем количество пассажиров.
 
-Рядом можно выбрать автомобиль и при необходимости изменить число пассажиров
-или цену топлива. Результат показывает не только сумму на человека, но и
-расстояние, и примерный расход топлива. Ссылку на маршрут можно открыть в
-Google Maps.
+Приложение использует длину маршрута, расход топлива автомобиля и цену топлива.
+К поездке можно один раз прибавить стоимость парковки. В конце TankTeiler
+делит примерные общие расходы на число пассажиров. Весь расчёт можно увидеть и
+проверить.
 
-Для демонстрации я сейчас выберу начальную и конечную точки и добавлю остановку.
-Затем поменяю её порядок. Видно, что маршрут и расстояние обновляются. Можно
-также указать цену парковки: она один раз прибавится к расходам на поездку и
-будет разделена между пассажирами. Цифры зависят от маршрута, машины и введённой
-цены. Это оценка топлива и парковки, а не всех возможных расходов.
-
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 5 — WAS IM HINTERGRUND PASSIERT | ca. 1,5 Minuten
-──────────────────────────────────────────────────────────────────────────────
+======================================================================
+FOLIE 4 — DIE APP IM EINSATZ | etwa 2 Minuten — LIVE-DEMO
+======================================================================
 
 DEUTSCH
-Einfach gesagt besteht die App aus drei Teilen. Der erste Teil ist die
-Webseite, die wir sehen und bedienen. Sie sammelt unsere Eingaben und zeigt die
-Ergebnisse. Der zweite Teil ist ein kleiner Server. Er nimmt Anfragen entgegen,
-prüft zum Beispiel die Fahrzeugdaten und spricht mit dem dritten Teil: der
-Datenbank.
+Hier sehen Sie die Anwendung. Ich kann Start und Ziel über die Suche eingeben
+oder auf der Karte auswählen. Die Markierungen lassen sich verschieben. Über
+„Stopp hinzufügen“ kann ich eine Zwischenstation einfügen und ihre Position
+ändern.
 
-Die Datenbank ist wie ein digitales Notizbuch für die Autos. Wenn wir ein Auto
-hinzufügen oder ändern, bleiben die Angaben gespeichert. Zusätzlich nutzt die
-Anwendung Google Maps für Karte, Ortsuche und Routen. Treibstoffpreise werden
-vom TCS abgerufen. Diese Aufgaben sind getrennt: Die App zeigt, der Server
-vermittelt, und die Datenbank merkt sich die Fahrzeuge.
+Im Bereich „Auto“ wähle ich ein Fahrzeug und sehe zum Beispiel Verbrauch und
+Treibstoffart. Bei der Fahrt kann ich die Distanz, die Zahl der Personen, den
+Treibstoffpreis und die Parkgebühr einstellen. Die Option „Hin und zurück“
+verdoppelt die Strecke für die Treibstoffrechnung; die Parkgebühr wird weiterhin
+nur einmal angesetzt.
+
+Das Ergebnis zeigt den Gesamtbetrag, Treibstoff, Parken, Strecke und benötigte
+Liter. Mit Google Maps kann ich die Route mit Zwischenstopps öffnen. Apple Maps
+öffnet Start und Ziel. Bei dieser App-Demo zeige ich eine Route, ändere einen
+Stopp und prüfe anschließend die neue Kostenaufteilung.
 
 РУССКИЙ ПЕРЕВОД
-Если говорить просто, приложение состоит из трёх частей. Первая — это веб-
-страница, которую мы видим и используем. Она собирает данные и показывает
-результаты. Вторая часть — небольшой сервер. Он принимает запросы, например
-проверяет данные автомобиля, и взаимодействует с третьей частью — базой данных.
+Перед нами приложение. Начало и конец маршрута можно найти через поиск или
+выбрать на карте. Метки можно перемещать. Кнопка добавления остановки позволяет
+вставить промежуточную точку и изменить её положение в маршруте.
 
-База данных похожа на цифровой блокнот для автомобилей. Если добавить или
-изменить машину, данные сохранятся. Кроме того, приложение использует Google
-Maps для карты, поиска мест и маршрутов. Цены на топливо загружаются с TCS.
-Обязанности разделены: приложение показывает, сервер связывает части, а база
-данных запоминает автомобили.
+В разделе автомобиля можно выбрать машину и посмотреть, например, расход и
+тип топлива. В параметрах поездки можно указать расстояние, число пассажиров,
+цену топлива и парковку. Режим «туда и обратно» удваивает расстояние для
+расчёта топлива, а парковка по-прежнему учитывается только один раз.
 
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 6 — EIN BLICK IN DEN CODE | ca. 1 Minute
-──────────────────────────────────────────────────────────────────────────────
+В результате отдельно показаны общая сумма, топливо, парковка, расстояние и
+литры. Google Maps открывает маршрут вместе с остановками. Apple Maps открывает
+начальную и конечную точки. Сейчас я покажу пример маршрута, изменю остановку и
+проверю, как изменится разделение расходов.
+
+======================================================================
+FOLIE 5 — WAS IM HINTERGRUND PASSIERT | etwa 1 Minute
+======================================================================
 
 DEUTSCH
-Hier sind zwei kurze Beispiele aus dem echten Code. Das erste fragt einen
-Fahrweg an. Der wichtige Gedanke ist nicht die Schreibweise, sondern die
-Anweisung: Start, Ziel und Zwischenstopps werden an den Kartendienst übergeben,
-der eine passende Route zurückliefert.
+Man kann TankTeiler mit einem kleinen Team vergleichen. Die Webseite ist der
+Teil, den wir sehen: Sie zeigt das Formular, die Karte und das Ergebnis. Der
+Server nimmt Anfragen entgegen und erledigt Aufgaben, für die die Webseite
+einen Vermittler braucht. Eine SQLite-Datenbank speichert die Fahrzeugdaten.
 
-Das zweite Beispiel ist die Kostenrechnung. Der Verbrauch ist für hundert
-Kilometer angegeben. Deshalb multiplizieren wir die Kilometer mit dem Verbrauch
-und teilen durch hundert. So erhalten wir die benötigten Liter. Die Liter
-multiplizieren wir mit dem Preis pro Liter. Zum Schluss teilen wir den
-Gesamtbetrag durch die Personen. Optional kommen Parkkosten dazu. Die App rundet
-den Betrag pro Person auf ganze Franken auf.
+Für Karte, Ortsuche und Routenplanung nutzt die App Google Maps. Treibstoffpreise
+werden beim TCS abgerufen. Jeder Teil hat also eine eigene Aufgabe: Die
+Webseite zeigt, der Server vermittelt, die Datenbank speichert und externe
+Dienste liefern Karten- oder Preisinformationen.
 
 РУССКИЙ ПЕРЕВОД
-Здесь показаны два небольших фрагмента настоящего кода. Первый запрашивает
-маршрут. Важна не запись сама по себе, а идея: начальная точка, конечная точка
-и промежуточные остановки передаются картографическому сервису, который
-возвращает подходящий маршрут.
+TankTeiler можно представить как небольшую команду. Веб-страница — это то,
+что мы видим: форму, карту и результат. Сервер принимает запросы и выполняет
+задачи, для которых странице нужен посредник. База SQLite хранит данные
+автомобилей.
 
-Второй пример — расчёт стоимости. Расход топлива указывается на сто километров.
-Поэтому умножаем расстояние на расход и делим на сто, получая нужное количество
-литров. Затем умножаем литры на цену за литр. В конце делим общую сумму на
-количество пассажиров. К этой сумме добавляется парковка, если она указана.
-Сумма на человека округляется вверх до целых франков.
+Для карты, поиска мест и построения маршрута приложение использует Google
+Maps. Цены на топливо загружаются с TCS. У каждой части своя роль: страница
+показывает информацию, сервер связывает части, база хранит данные, а внешние
+сервисы предоставляют карту и цены.
 
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 7 — GOOGLE MAPS API: WAS PASSIERT MIT DEN DATEN? | ca. 1,5 Minuten
-──────────────────────────────────────────────────────────────────────────────
+======================================================================
+FOLIE 6 — SO WERDEN DIE KOSTEN BERECHNET | etwa 1 Minute
+======================================================================
 
 DEUTSCH
-Eine API ist ein klarer Übergabepunkt zwischen zwei Programmen. Unsere Webseite
-lädt die Google-Maps-JavaScript-Bibliothek mit einem Projektschlüssel. So kann
-sie die Karte anzeigen und die passenden Google-Dienste ansprechen.
+Die Formel beginnt mit dem Verbrauch pro hundert Kilometer. Bei einer Strecke
+von 100 Kilometern und einem Verbrauch von 6 Litern pro hundert Kilometer
+brauchen wir rechnerisch 6 Liter. Bei einem Preis von 2 Franken pro Liter sind
+das 12 Franken Treibstoffkosten.
 
-Wenn ich einen Ortsnamen eingebe, sendet der Geocoding-Dienst diese Suche an
-Google. Wenn ich auf die Karte klicke, verwendet die App die Koordinaten dieses
-Klicks. Google gibt eine lesbare Adresse und geografische Koordinaten zurück.
-Die App verwendet die Koordinaten als Start, Ziel oder Zwischenstopp.
-
-Für eine Route sendet die App diese Wegpunkte sowie den Fahrmodus „Auto“ an die
-Routes API. Im Code wird außerdem genau angegeben, welche Antwort benötigt wird:
-die Entfernung in Metern und die Punkte des Routenverlaufs. Google gibt diese
-Daten zurück. Die App zeichnet den Routenpfad auf der Karte. Danach berechnet
-unsere eigene Kostenformel Treibstoff und Parken — Google berechnet also nicht
-den Preis der Fahrt.
-
-Der Schlüssel ist im Browser sichtbar. Das ist bei einer Karten-Webseite normal;
-deshalb beschränken wir ihn in Google Cloud auf unsere erlaubte Webseite und die
-benötigten APIs. Der Schlüssel identifiziert das Projekt für die Nutzung und
-Abrechnung. Die Adresse oder der Routenverlauf sind nicht im Schlüssel
-gespeichert.
+Wenn zusätzlich 9 Franken Parkgebühr anfallen, betragen die Gesamtkosten
+21 Franken. Bei drei Personen sind das 7 Franken pro Person. TankTeiler rundet
+den Anteil auf ganze Franken auf. Das ist eine Schätzung: Weitere Kosten wie
+Maut oder besondere Gebühren sind nicht automatisch enthalten.
 
 РУССКИЙ ПЕРЕВОД
-API — это чёткая точка обмена данными между двумя программами. Наш сайт
-загружает JavaScript-библиотеку Google Maps с ключом проекта. Так он может
-показывать карту и обращаться к нужным сервисам Google.
+Формула начинается с расхода на сто километров. Если проехать 100 километров
+на автомобиле с расходом 6 литров на сто километров, потребуется примерно
+6 литров топлива. При цене 2 франка за литр топливо обойдётся в 12 франков.
 
-Когда я ввожу название места, сервис Geocoding отправляет запрос в Google. Если
-я нажимаю на карту, приложение использует координаты нажатия. Google возвращает
-понятный адрес и географические координаты. Приложение использует координаты
-как начало, конец или промежуточную остановку.
+Если добавить 9 франков за парковку, общие расходы составят 21 франк. На троих
+это будет 7 франков с человека. TankTeiler округляет долю вверх до целого
+франка. Это оценка: дополнительные расходы, например платные дороги, в неё
+автоматически не входят.
 
-Для маршрута приложение отправляет эти точки и режим движения «автомобиль» в
-Routes API. В коде точно указано, какой ответ нам нужен: расстояние в метрах и
-точки маршрута. Google возвращает эти данные, приложение рисует маршрут на
-карте. После этого стоимость топлива и парковки рассчитывает уже наша формула —
-Google не вычисляет стоимость поездки.
-
-Ключ виден в браузере. Для сайта с картой это нормально, поэтому в Google Cloud
-ключ ограничивают разрешённым сайтом и нужными API. Ключ идентифицирует проект
-для учёта использования и оплаты. Адреса и маршрут внутри ключа не хранятся.
-
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 8 — ZUVERLÄSSIGKEIT | ca. 1 Minute
-──────────────────────────────────────────────────────────────────────────────
+======================================================================
+FOLIE 7 — SO NUTZT DIE APP GOOGLE MAPS | etwa 1,5 Minuten
+======================================================================
 
 DEUTSCH
-Auch an den Alltag ist gedacht. Treibstoffpreise werden zwischengespeichert,
-damit sie nicht bei jeder einzelnen Anfrage neu geladen werden müssen. Falls
-der Abruf gerade nicht funktioniert, kann ein Ersatzwert verwendet werden.
+Eine API ist eine vereinbarte Möglichkeit, wie zwei Programme Informationen
+austauschen. Wenn ich einen Ortsnamen suche, fragt die App Google nach dem Ort.
+Google kann dazu Koordinaten und eine lesbare Adresse zurückgeben. Wenn ich auf
+die Karte klicke, verwendet die App die Koordinaten dieses Kartenpunkts.
 
-Fahrzeugdaten werden geprüft, bevor sie gespeichert werden. Zum Beispiel muss
-die Zahl der Sitzplätze plausibel sein. Und weil die Anwendung ohne großes
-Frontend-Framework gebaut ist, bleibt der sichtbare Teil vergleichsweise
-leichtgewichtig. Für Karte und Routen braucht man allerdings Internetzugang und
-eine passende Google-Maps-Konfiguration.
+Für die Route schickt die App Start, Ziel, Zwischenstopps und den Fahrmodus
+„Auto“ an die Google Routes API. Wir bitten um die Entfernung und um die Punkte,
+aus denen der Routenverlauf besteht. Google liefert diese Routendaten zurück.
+Die App zeichnet den Verlauf auf der Karte.
+
+Wichtig ist die Aufgabenteilung: Google berechnet die Route, aber nicht den
+Preis unserer Fahrt. Die Kostenformel für Treibstoff und Parken wird von
+TankTeiler selbst ausgeführt. Der Maps-Schlüssel wird für die Webseite benötigt
+und muss in Google Cloud auf die eigene Webseite und die verwendeten APIs
+eingeschränkt werden.
 
 РУССКИЙ ПЕРЕВОД
-Приложение учитывает и повседневные ситуации. Цены на топливо временно
-кэшируются, поэтому их не нужно загружать заново при каждом запросе. Если
-получить актуальные данные не удаётся, можно использовать запасное значение.
+API — это согласованный способ обмена данными между двумя программами. Когда
+я ищу место по названию, приложение отправляет запрос в Google. В ответ Google
+может вернуть координаты и понятный адрес. Если я нажимаю на карту, приложение
+использует координаты выбранной точки.
 
-Перед сохранением данные автомобиля проверяются. Например, количество мест
-должно быть правдоподобным. Поскольку приложение сделано без крупного
-фронтенд-фреймворка, его интерфейс остаётся относительно лёгким. Однако для
-карты и маршрутов нужны интернет и корректная настройка Google Maps.
+Для построения маршрута приложение передаёт в Google Routes API начало, конец,
+остановки и режим «автомобиль». Мы запрашиваем расстояние и точки, из которых
+состоит линия маршрута. Google возвращает маршрутные данные, а приложение
+рисует путь на карте.
 
-──────────────────────────────────────────────────────────────────────────────
-FOLIE 9 — ABSCHLUSS | ca. 45 Sekunden
-──────────────────────────────────────────────────────────────────────────────
+Важно разделять обязанности: Google строит маршрут, но не рассчитывает
+стоимость нашей поездки. Формулу расходов на топливо и парковку выполняет
+сам TankTeiler. Ключ Maps нужен веб-странице; в Google Cloud его следует
+ограничить своим сайтом и используемыми API.
+
+======================================================================
+FOLIE 8 — WAS GESPEICHERT UND GEPRÜFT WIRD | etwa 1 Minute
+======================================================================
 
 DEUTSCH
-Zusammengefasst verbindet TankTeiler eine reale Route, die Treibstoffkosten
-eines ausgewählten Autos, optionale Parkkosten und eine faire Aufteilung auf die
-Mitfahrenden. Das Ziel war nicht, möglichst viele Funktionen zu zeigen, sondern
-eine kleine Alltagssituation verständlich und unkompliziert zu lösen.
+Fahrzeugangaben werden geprüft, bevor sie gespeichert werden. Die Treibstoff-
+preise werden zwischengespeichert, damit der Server sie nicht bei jeder
+Änderung erneut abrufen muss. Wenn der Preis-Dienst vorübergehend nicht
+erreichbar ist, steht ein Ersatzwert bereit.
 
-Gute Software muss nicht kompliziert aussehen. Im besten Fall macht sie eine
-gute Entscheidung einfacher. Vielen Dank fürs Zuhören — ich beantworte gern Ihre
-Fragen.
+Für die Veröffentlichung habe ich Render verwendet. TankTeiler braucht nicht
+nur eine Webseite, sondern auch einen laufenden Node.js-Server für die
+Fahrzeugdaten und Preise. GitHub Pages kann HTML, CSS und JavaScript als
+statische Seite ausliefern, führt aber keinen Express-Server und keine
+SQLite-Datenbank aus. Render kann Webseite und Server gemeinsam unter einer
+Adresse betreiben. Dadurch kann auch der QR-Code auf der letzten Folie direkt
+zur funktionierenden Demo führen.
+
+Die Demo nutzt den kostenlosen Render-Tarif. Nach einer längeren Pause kann
+der Server schlafen und beim nächsten Aufruf kurz zum Aufwachen brauchen. Die
+lokale SQLite-Datei ist dort nicht als dauerhafte Datenspeicherung gedacht;
+gespeicherte Änderungen können nach einem Neustart verloren gehen.
 
 РУССКИЙ ПЕРЕВОД
-Подведём итог: TankTeiler объединяет реальный маршрут, расходы на топливо выбранного
-автомобиля, дополнительные расходы на парковку и справедливое распределение
-между пассажирами. Цель была не в том, чтобы показать как можно больше функций,
-а в том, чтобы
-понятно и просто решить небольшую повседневную задачу.
+Данные автомобиля проверяются перед сохранением. Цены на топливо кэшируются,
+поэтому серверу не нужно получать их заново после каждого изменения. Если
+сервис с ценами временно недоступен, приложение использует запасное значение.
 
-Хорошее программное обеспечение не обязано выглядеть сложным. В идеале оно
-помогает проще принять справедливое решение. Спасибо за внимание — буду рад
-ответить на ваши вопросы.
+Для публикации я выбрал Render. TankTeiler нужна не только веб-страница, но и
+работающий сервер Node.js для данных автомобилей и цен. GitHub Pages может
+публиковать статические HTML, CSS и JavaScript, но не запускает Express-сервер
+и базу SQLite. Render позволяет разместить страницу и сервер вместе по одному
+адресу. Поэтому QR-код на последнем слайде сразу ведёт на работающую демо-
+версию.
+
+Демо использует бесплатный тариф Render. После долгого бездействия сервер может
+«уснуть», и при первом открытии ему может потребоваться время на запуск.
+Локальный файл SQLite там не предназначен для постоянного хранения; изменения
+могут потеряться после перезапуска.
+
+======================================================================
+FOLIE 9 — ABSCHLUSS UND QR-CODE | etwa 30 Sekunden
+======================================================================
+
+DEUTSCH
+Zusammengefasst verbindet TankTeiler eine Route, ein Fahrzeug und die Zahl der
+Mitfahrenden zu einer klaren Schätzung der gemeinsamen Fahrtkosten. Die
+Berechnung bleibt sichtbar, sodass alle nachvollziehen können, wie der Anteil
+zustande kommt.
+
+Vielen Dank fürs Zuhören. Wenn Sie möchten, können Sie jetzt den QR-Code
+scannen und die App selbst ausprobieren. Ich beantworte gern Ihre Fragen.
+
+РУССКИЙ ПЕРЕВОД
+Подведём итог: TankTeiler объединяет маршрут, автомобиль и число пассажиров,
+чтобы понятно оценить общие расходы на поездку. Расчёт прозрачен, поэтому
+каждый может проверить, откуда взялась его доля.
+
+Спасибо за внимание. Если хотите, отсканируйте QR-код и попробуйте приложение
+сами. Я с удовольствием отвечу на ваши вопросы.
