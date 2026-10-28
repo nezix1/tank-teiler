@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tankteiler
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false

@@ -1,0 +1,13 @@
+{
+  "name": "tankteiler",
+  "version": "1.0.0",
+  "description": "A multilingual web app for planning shared trips and splitting fuel and parking costs fairly.",
+  "main": "server.js",
+  "engines": { "node": ">=18 <23" },
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  }
+}

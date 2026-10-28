@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TankTeiler</title>
+  <meta name="theme-color" content="#0b1420">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <aside class="panel">
+      <header class="top">
+        <a class="brand" href="/" aria-label="TankTeiler">
+          <img class="brand-mark" src="logo.svg" alt="" width="38" height="38">
+          <h1>TankTeiler</h1>
+        </a>
+        <div class="tools">
+          <select id="lang" aria-label="Sprache"><option value="de">DE</option><option value="en">EN</option><option value="ru">RU</option></select>
+          <button id="theme" class="icon" aria-label="Theme">◐</button>
+        </div>
+      </header>
+      <div class="notice-host"><div id="msg" class="msg" role="status" aria-live="polite" hidden></div></div>
+      <p class="tag" data-i18n="tagline"></p>
+
+      <section class="route-section">
+        <h2 data-i18n="route"></h2>
+        <div class="pt"><span class="pin a">A</span><input id="from" data-i18n-ph="searchA" autocomplete="off"></div>
+        <div class="pt"><span class="pin b">B</span><input id="to" data-i18n-ph="searchB" autocomplete="off"></div>
+        <div id="waypoints"></div>
+        <button id="addStop" class="add-stop" type="button" data-i18n="addStop"></button>
+        <p class="hint" data-i18n="hint"></p>
+        <div class="row">
+          <button id="swap" class="ghost" data-i18n="swap"></button>
+          <button id="reset" class="ghost" data-i18n="reset"></button>
+        </div>
+      </section>
+
+      <section>
+        <h2 data-i18n="car"></h2>
+        <select id="carSel"></select>
+        <div class="grid">
+          <label class="wide"><span data-i18n="name"></span><input id="cName"></label>
+          <label><span data-i18n="seats"></span><input id="cSeats" type="number" min="1" max="9"></label>
+          <label><span data-i18n="cons"></span><input id="cCons" type="number" step="0.1" min="0.1"></label>
+          <label class="wide"><span data-i18n="fuel"></span>
+            <select id="cFuel"><option value="95">Bleifrei 95</option><option value="98">Bleifrei 98</option><option value="diesel">Diesel</option></select></label>
+        </div>
+        <div class="row">
+          <button id="save" class="ghost" data-i18n="save"></button>
+          <button id="saveNew" class="ghost" data-i18n="saveNew"></button>
+          <button id="del" class="ghost danger" data-i18n="del"></button>
+        </div>
+      </section>
+
+      <section>
+        <h2 data-i18n="options"></h2>
+        <div class="grid">
+          <label><span data-i18n="distance"></span><input id="km" type="number" step="0.1" min="0" value="0"></label>
+          <label><span data-i18n="pax"></span><input id="pax" type="number" min="1" max="9" value="1"></label>
+          <label><span data-i18n="price"></span><input id="price" type="number" step="0.01" min="0"></label>
+          <label><span data-i18n="parking"></span><input id="parking" type="number" step="0.01" min="0" value="0"></label>
+          <label class="check"><input id="round" type="checkbox"><span data-i18n="round"></span></label>
+        </div>
+        <p class="hint" data-i18n="parkingHint"></p>
+        <p id="priceInfo" class="hint"></p>
+      </section>
+
+      <section class="result" aria-live="polite">
+        <div class="plate">
+          <div class="big"><span id="perPerson">0</span><small>CHF</small></div>
+          <div class="cap" data-i18n="perPerson"></div>
+        </div>
+        <dl>
+          <div><dt data-i18n="total"></dt><dd id="total"></dd></div>
+          <div><dt data-i18n="fuelCost"></dt><dd id="fuelCostOut"></dd></div>
+          <div><dt data-i18n="parking"></dt><dd id="parkingOut"></dd></div>
+          <div><dt data-i18n="dist"></dt><dd id="distOut"></dd></div>
+          <div><dt data-i18n="liters"></dt><dd id="litersOut"></dd></div>
+        </dl>
+        <div class="map-links">
+          <a id="gmaps" class="open" target="_blank" rel="noopener" hidden data-i18n="open"></a>
+          <a id="appleMaps" class="open apple-open" target="_blank" rel="noopener" hidden data-i18n="openApple"></a>
+        </div>
+        <p id="mapLinksHint" class="hint" hidden></p>
+      </section>
+      <footer class="panel-footer">
+        <!-- <a class="presentation-link" href="/presentation" data-i18n="presentation"></a> -->
+      </footer>
+    </aside>
+    <div id="map" class="map"><div class="nomap" data-i18n="loadingMap"></div></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
