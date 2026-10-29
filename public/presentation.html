@@ -39,7 +39,7 @@
           <button class="primary-button go-next" type="button">Präsentation starten <span>→</span></button>
           <a class="text-link" href="/">Zur Live-App <span>↗</span></a>
         </div>
-        <div class="hero-meta"><span>PROJEKTVORSTELLUNG</span><i></i><span>CA. 10–12 MINUTEN</span><i></i><span>OHNE PROGRAMMIER-VORWISSEN</span></div>
+        <div class="hero-meta"><span>CA. 10–12 MINUTEN</span><i></i><span>OHNE PROGRAMMIER-VORWISSEN</span></div>
       </div>
       <div class="hero-visual" aria-hidden="true">
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
@@ -59,7 +59,6 @@
         <article class="problem-card"><span class="card-number">02</span><div class="problem-icon">⛽</div><h3>Was kostet der Treibstoff?</h3><p>Verbrauch und aktueller Preis sind nicht bei jedem Auto gleich.</p></article>
         <article class="problem-card"><span class="card-number">03</span><div class="problem-icon">÷</div><h3>Wer zahlt wie viel?</h3><p>Am Ende soll es für alle nachvollziehbar und fair sein.</p></article>
       </div>
-      <div class="takeaway"><span class="takeaway-mark">“</span><p>Die Lösung muss nicht kompliziert sein.<br><strong>Sie muss die richtigen Dinge zusammenbringen.</strong></p><span class="takeaway-line"></span></div>
     </section>
 
     <section class="slide" aria-label="Die Lösung">
@@ -72,7 +71,6 @@
       </div>
       <div class="formula-card">
         <div><span class="formula-label">DIE IDEE HINTER DER RECHNUNG</span><p><strong>Kilometer</strong> × Verbrauch ÷ 100 × Preis pro Liter <span>= Treibstoffkosten</span><br>(Treibstoffkosten + Parken) ÷ Personen = Anteil pro Person</p></div>
-        <div class="formula-badge">einfach<br><strong>nachvollziehbar</strong></div>
       </div>
     </section>
 
@@ -89,9 +87,9 @@
           <div class="demo-total"><small>UNGEFÄHR PRO PERSON</small><strong>CHF 14.40</strong><span>Treibstoff CHF 34.20 + Parken CHF 9.00 · geteilt durch 3</span></div>
         </div>
         <div class="demo-notes">
-          <div class="note"><span class="note-dot blue-dot"></span><div><strong>Stopps inklusive</strong><p>Ein Zwischenhalt kann hinzugefügt, entfernt oder in der Reihenfolge geändert werden.</p></div></div>
-          <div class="note"><span class="note-dot yellow-dot"></span><div><strong>Ergebnis verständlich</strong><p>Nicht nur ein Betrag: Strecke, Verbrauch und Gesamtkosten bleiben sichtbar.</p></div></div>
-          <div class="note"><span class="note-dot green-dot"></span><div><strong>Ein Klick zur Navigation</strong><p>Die geplante Route lässt sich in Google Maps öffnen.</p></div></div>
+          <div class="note"><span class="note-dot blue-dot"></span><div><strong>Stopps anpassen</strong><p>Zwischenstopps hinzufügen und neu ordnen.</p></div></div>
+          <div class="note"><span class="note-dot yellow-dot"></span><div><strong>Kosten verstehen</strong><p>Strecke, Treibstoff und Parken einzeln sehen.</p></div></div>
+          <div class="note"><span class="note-dot green-dot"></span><div><strong>Route öffnen</strong><p>Die Fahrt direkt in Google Maps ansehen.</p></div></div>
           <a href="/" class="demo-cta">Jetzt live ausprobieren <span>↗</span></a>
         </div>
       </div>
@@ -144,31 +142,22 @@
       <div class="section-head">      <p class="eyebrow">06 — GOOGLE MAPS</p><h2>So nutzt die App Google Maps</h2>
         <p class="section-lead">Eine API ist ein klarer Übergabepunkt: Unsere App fragt einen spezialisierten Dienst an und verarbeitet dessen Antwort.</p></div>
       <div class="api-flow">
-        <article class="api-step"><span class="api-index">01</span><div class="api-icon">⌕</div><div><h3>Ort finden</h3><p>Eine Adresse oder Kartenposition geht an den Geocoding-Dienst. Zurück kommen Koordinaten und eine lesbare Adresse.</p></div><div class="api-data"><span>Adresse / Koordinaten</span><b>→</b><span>Adresse + Breite/Länge</span></div></article>
-        <article class="api-step"><span class="api-index">02</span><div class="api-icon route-api-icon">↗</div><div><h3>Route berechnen</h3><p>Start, Ziel, Stopps und „Fahrt mit dem Auto“ gehen an Routes. Angefordert werden nur Distanz und Linienverlauf.</p></div><div class="api-data"><span>Wegpunkte + Fahrmodus</span><b>→</b><span>Meter + Routenpfad</span></div></article>
-        <article class="api-step"><span class="api-index">03</span><div class="api-icon result-api-icon">✓</div><div><h3>Ergebnis anzeigen</h3><p>Die App zeichnet den Pfad auf der Karte. Die Treibstoff- und Parkkosten teilt sie anschließend selbst durch die Personenzahl.</p></div><div class="api-data"><span>Routenantwort</span><b>→</b><span>Linie + Kostenanteil</span></div></article>
+        <article class="api-step"><span class="api-index">01</span><div class="api-icon">⌕</div><div><h3>Ort finden</h3><p>Google Maps wandelt Adresse oder Kartenpunkt in Koordinaten um.</p></div><div class="api-data"><span>Ort</span><b>→</b><span>Koordinaten</span></div></article>
+        <article class="api-step"><span class="api-index">02</span><div class="api-icon route-api-icon">↗</div><div><h3>Route berechnen</h3><p>Start, Ziel und Stopps liefern Entfernung und Routenlinie.</p></div><div class="api-data"><span>Wegpunkte</span><b>→</b><span>Distanz + Linie</span></div></article>
+        <article class="api-step"><span class="api-index">03</span><div class="api-icon result-api-icon">✓</div><div><h3>Ergebnis anzeigen</h3><p>TankTeiler zeigt die Route und berechnet den Anteil pro Person.</p></div><div class="api-data"><span>Routendaten</span><b>→</b><span>Kostenanteil</span></div></article>
       </div>
       <div class="api-bottom">
-        <article class="api-code-card"><div class="api-code-head"><span>VEREINFACHTER AUFRUF</span><span class="code-language">JavaScript</span></div><pre><code><span class="code-purple">const</span> { routes } = <span class="code-blue">await</span> Route.<span class="code-yellow">computeRoutes</span>({
-  origin, destination, intermediates,
-  travelMode: <span class="code-green">'DRIVING'</span>,
-  fields: [<span class="code-green">'distanceMeters'</span>, <span class="code-green">'path'</span>]
-});
-<span class="code-muted">// Distanz und Linienpunkte kommen zurück</span></code></pre></article>
-        <aside class="api-key-note"><span class="key-icon">🔑</span><div><strong>Der Schlüssel ist kein Geheimnis im Browser</strong><p>Der Maps-Schlüssel wird von der Webseite genutzt. Deshalb wird er in Google Cloud auf erlaubte Webseiten und APIs beschränkt. Er enthält keine Adressen — er ordnet die Nutzung dem eigenen Projekt zu.</p></div></aside>
+        <aside class="api-key-note"><span class="key-icon">🔑</span><div><strong>Der Schlüssel wird eingeschränkt</strong><p>In Google Cloud ist festgelegt, welche Webseiten und APIs ihn nutzen dürfen. Der Schlüssel enthält keine Adressen.</p></div></aside>
       </div>
-      <p class="small-print">Die Anfrage geht vom Browser an Google Maps. Die Kostenformel läuft danach im Browser; deine Fahrzeugdaten bleiben im lokalen Speicher deines Browsers.</p>
     </section>
 
     <section class="slide" aria-label="Zuverlässigkeit und Datenschutz">
       <div class="section-head"><p class="eyebrow">07 — DATEN & EINGABEN</p><h2>Was gespeichert und geprüft wird</h2></div>
       <div class="reliability-grid">
-        <article class="reliability-card"><span class="reliability-icon">↻</span><div><h3>Preise nicht bei jedem Klick neu laden</h3><p>Der Server hält abgerufene Treibstoffpreise eine Zeit lang im Zwischenspeicher. Wenn der Abruf fehlschlägt, steht ein Ersatzwert bereit.</p></div></article>
-        <article class="reliability-card"><span class="reliability-icon">✓</span><div><h3>Eingaben werden geprüft</h3><p>Zum Beispiel: Sitzplätze und Verbrauch müssen plausible Werte haben, bevor ein Auto gespeichert wird.</p></div></article>
-        <article class="reliability-card"><span class="reliability-icon">▣</span><div><h3>Autos bleiben privat</h3><p>Deine Fahrzeugdaten liegen im Browser-Speicher auf deinem Gerät, nicht in einer gemeinsamen Server-Datenbank.</p></div></article>
-        <article class="reliability-card"><span class="reliability-icon">◎</span><div><h3>Die App bleibt leichtgewichtig</h3><p>Das Frontend verwendet normales HTML, CSS und JavaScript, ohne großes UI-Framework.</p></div></article>
+        <article class="reliability-card"><span class="reliability-icon">↻</span><div><h3>Treibstoffpreise</h3><p>Preise werden zwischengespeichert; bei Ausfall gibt es einen Ersatzwert.</p></div></article>
+        <article class="reliability-card"><span class="reliability-icon">✓</span><div><h3>Plausible Eingaben</h3><p>Sitzplätze und Verbrauch werden vor dem Speichern geprüft.</p></div></article>
+        <article class="reliability-card"><span class="reliability-icon">▣</span><div><h3>Dein Auto bleibt privat</h3><p>Fahrzeugdaten werden nur in deinem Browser gespeichert.</p></div></article>
       </div>
-      <p class="small-print">Die Karte und Routenberechnung benötigen eine Internetverbindung und korrekt eingerichtete Google-Maps-APIs.</p>
     </section>
 
     <section class="slide closing" aria-label="Abschluss">
