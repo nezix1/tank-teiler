@@ -6,7 +6,7 @@ const T = {
     hint: 'Tipp: Klick auf die Karte setzt zuerst A, dann B. Für Stopps erst ein Feld auswählen. Pins lassen sich verschieben.', swap: 'A ⇄ B tauschen', reset: 'Zurücksetzen',
     addStop: '+ Stopp hinzufügen', stop: 'Stopp', stopPlaceholder: 'Zwischenstopp suchen oder Karte auswählen', removeStop: 'Stopp entfernen', moveUp: 'Nach oben', moveDown: 'Nach unten', completeStops: 'Bitte wähle für jeden Zwischenstopp einen Ort aus.', stopLimit: 'Maximal 25 Zwischenstopps sind möglich.',
     car: 'Auto', noCars: 'Noch kein Auto gespeichert. Gib unten die Fahrzeugdaten ein und wähle „Auto hinzufügen“.', carStorage: 'Deine Autos werden nur in diesem Browser gespeichert.', selectCar: 'Auto auswählen', carNamePlaceholder: 'z. B. Mein Auto', addCar: 'Auto hinzufügen', name: 'Name', seats: 'Sitzplätze', cons: 'Verbrauch (L/100 km)', fuel: 'Treibstoff', save: 'Speichern', saveNew: 'Als neues Auto', del: 'Löschen',
-    options: 'Fahrt', distance: 'Distanz (km)', pax: 'Personen', price: 'Preis (CHF/L)', parking: 'Parkkosten (CHF)', parkingHint: 'Parkkosten werden einmal pro Fahrt berechnet und auf alle Personen aufgeteilt.', fuelCost: 'Treibstoffkosten', round: 'Hin und zurück',
+    options: 'Fahrt', distance: 'Distanz (km)', pax: 'Personen', price: 'Preis (CHF/L)', parking: 'Parkkosten (CHF)', roadFees: 'Maut (CHF)', tripFeesHint: 'Parken und Maut gelten für die ganze Fahrt. Bei Hin- und Rückfahrt wird nur der Treibstoff verdoppelt.', fuelCost: 'Treibstoffkosten', round: 'Hin und zurück',
     perPerson: 'pro Person (aufgerundet)', total: 'Total', dist: 'Strecke', liters: 'Treibstoff', open: 'Google Maps', openApple: 'Apple Maps', appleStopsNote: 'Apple Maps öffnet Start und Ziel; Zwischenstopps sind im Google-Maps-Link enthalten.',
     loadingMap: 'Karte wird geladen …', noKey: 'Kein Google-Maps-Key gefunden. Trage ihn in die Datei .env ein (GOOGLE_MAPS_API_KEY). Die Distanz kannst du bis dahin manuell eingeben.',
     routeErr: 'Route konnte nicht berechnet werden. Prüfe Routes API und Schlüssel. {detail}', notFound: 'Ort nicht gefunden.',
@@ -16,7 +16,7 @@ const T = {
     hint: 'Tip: click the map to set A, then B. Select a stop field before choosing it on the map. Pins can be dragged.', swap: 'Swap A ⇄ B', reset: 'Reset',
     addStop: '+ Add stop', stop: 'Stop', stopPlaceholder: 'Search stop or choose on map', removeStop: 'Remove stop', moveUp: 'Move up', moveDown: 'Move down', completeStops: 'Choose a location for every stop.', stopLimit: 'You can add up to 25 stops.',
     car: 'Car', noCars: 'No car saved yet. Enter your car details below and choose “Add car”.', carStorage: 'Your cars are stored only in this browser.', selectCar: 'Select a car', carNamePlaceholder: 'e.g. My car', addCar: 'Add car', name: 'Name', seats: 'Seats', cons: 'Consumption (L/100 km)', fuel: 'Fuel', save: 'Save', saveNew: 'Save as new', del: 'Delete',
-    options: 'Trip', distance: 'Distance (km)', pax: 'People', price: 'Price (CHF/L)', parking: 'Parking (CHF)', parkingHint: 'Parking is added once per trip and shared between all people.', fuelCost: 'Fuel costs', round: 'Round trip',
+    options: 'Trip', distance: 'Distance (km)', pax: 'People', price: 'Price (CHF/L)', parking: 'Parking (CHF)', roadFees: 'Tolls (CHF)', tripFeesHint: 'Parking and tolls apply to the whole trip. A round trip doubles fuel only.', fuelCost: 'Fuel costs', round: 'Round trip',
     perPerson: 'per person (rounded up)', total: 'Total', dist: 'Distance', liters: 'Fuel', open: 'Google Maps', openApple: 'Apple Maps', appleStopsNote: 'Apple Maps opens the start and destination; stops are included in the Google Maps link.',
     loadingMap: 'Loading map …', noKey: 'No Google Maps key found. Add it to the .env file (GOOGLE_MAPS_API_KEY). Until then you can enter the distance manually.',
     routeErr: 'Route could not be calculated. Check the Routes API and API key. {detail}', notFound: 'Place not found.',
@@ -26,7 +26,7 @@ const T = {
     hint: 'Подсказка: клик по карте ставит сначала A, затем B. Чтобы поставить остановку на карте, выберите её поле. Метки можно двигать.', swap: 'Поменять A ⇄ B', reset: 'Сбросить',
     addStop: '+ Добавить остановку', stop: 'Остановка', stopPlaceholder: 'Найти остановку или выбрать на карте', removeStop: 'Удалить остановку', moveUp: 'Переместить выше', moveDown: 'Переместить ниже', completeStops: 'Укажите место для каждой остановки.', stopLimit: 'Можно добавить не более 25 остановок.',
     car: 'Машина', noCars: 'Машин пока нет. Введи данные своей машины и нажми «Добавить машину».', carStorage: 'Твои машины сохраняются только в этом браузере.', selectCar: 'Выбрать машину', carNamePlaceholder: 'например, Моя машина', addCar: 'Добавить машину', name: 'Название', seats: 'Места', cons: 'Расход (л/100 км)', fuel: 'Топливо', save: 'Сохранить', saveNew: 'Как новую', del: 'Удалить',
-    options: 'Поездка', distance: 'Расстояние (км)', pax: 'Людей', price: 'Цена (CHF/л)', parking: 'Парковка (CHF)', parkingHint: 'Стоимость парковки учитывается один раз за поездку и делится между пассажирами.', fuelCost: 'Топливо', round: 'Туда и обратно',
+    options: 'Поездка', distance: 'Расстояние (км)', pax: 'Людей', price: 'Цена (CHF/л)', parking: 'Парковка (CHF)', roadFees: 'Платные дороги (CHF)', tripFeesHint: 'Парковка и платные дороги указываются за всю поездку. При поездке туда и обратно удваивается только топливо.', fuelCost: 'Топливо', round: 'Туда и обратно',
     perPerson: 'с человека (округлено вверх)', total: 'Всего', dist: 'Дистанция', liters: 'Топливо', open: 'Google Maps', openApple: 'Apple Maps', appleStopsNote: 'Apple Maps откроет начало и конец маршрута; остановки есть в ссылке Google Maps.',
     loadingMap: 'Загрузка карты …', noKey: 'Ключ Google Maps не найден. Добавь его в файл .env (GOOGLE_MAPS_API_KEY). Пока можно ввести расстояние вручную.',
     routeErr: 'Не удалось построить маршрут. Проверь Routes API и API-ключ. {detail}', notFound: 'Место не найдено.',
@@ -178,7 +178,8 @@ function calc() {
   const liters = km * consumption / 100;
   const fuelCost = liters * (+$('#price').value || 0);
   const parking = Math.max(0, +$('#parking').value || 0);
-  const total = fuelCost + parking;
+  const roadFees = Math.max(0, +$('#roadFees').value || 0);
+  const total = fuelCost + parking + roadFees;
   const seats = Math.max(1, +$('#cSeats').value || 1);
   const pax = Math.min(Math.max(1, +$('#pax').value || 1), seats);
   $('#pax').max = seats;
@@ -186,6 +187,7 @@ function calc() {
   $('#total').textContent = total.toFixed(2) + ' CHF';
   $('#fuelCostOut').textContent = fuelCost.toFixed(2) + ' CHF';
   $('#parkingOut').textContent = parking.toFixed(2) + ' CHF';
+  $('#roadFeesOut').textContent = roadFees.toFixed(2) + ' CHF';
   $('#distOut').textContent = km.toFixed(1) + ' km';
   $('#litersOut').textContent = liters.toFixed(1) + ' L';
 }
@@ -504,7 +506,7 @@ function init() {
 
   $('#carSel').onchange = fillEditor;
   $('#cFuel').onchange = () => { setPriceFromFuel(); calc(); };
-  ['#cSeats', '#cCons', '#km', '#pax', '#price', '#parking', '#round'].forEach(s => $(s).addEventListener('input', calc));
+  ['#cSeats', '#cCons', '#km', '#pax', '#price', '#parking', '#roadFees', '#round'].forEach(s => $(s).addEventListener('input', calc));
   $('#save').onclick = () => saveCar(false);
   $('#saveNew').onclick = () => saveCar(true);
   $('#del').onclick = async () => {

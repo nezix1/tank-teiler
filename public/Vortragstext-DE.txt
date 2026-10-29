@@ -1,0 +1,151 @@
+TANKTEILER — MEIN VORTRAG
+Einfaches Deutsch | etwa 10–12 Minuten mit kurzer Live-Demo
+
+VOR DEM VORTRAG
+Präsentation: https://tankteiler.onrender.com/presentation
+Mit den Pfeiltasten oder der Leertaste wechseln Sie die Folien.
+Auf der letzten Folie können die Zuhörer den QR-Code scannen.
+Die Hinweise in Klammern sind nur für mich und werden nicht vorgelesen.
+
+======================================================================
+FOLIE 1 — TITEL | etwa 1 Minute
+======================================================================
+
+Guten Tag. Heute stelle ich mein Projekt TankTeiler vor.
+
+Die Idee ist einfach: Mehrere Personen fahren zusammen. Aber wie teilen sie
+die Kosten? TankTeiler hilft dabei.
+
+Wir geben die Strecke, das Auto und die Zahl der Personen ein. Die App
+berechnet die Kosten für Treibstoff. Parkkosten und Maut können wir auch
+eintragen. Am Ende sehen wir den Preis pro Person.
+
+Zuerst zeige ich das Problem. Dann sehen wir die App. Zum Schluss erkläre ich
+kurz, wie sie funktioniert.
+
+======================================================================
+FOLIE 2 — DAS PROBLEM | etwa 1 Minute
+======================================================================
+
+Eine gemeinsame Fahrt ist oft schnell geplant. Die Kosten sind aber nicht
+immer klar.
+
+Wie lang ist die Strecke? Wie viel Treibstoff braucht das Auto? Was kostet
+der Treibstoff? Gibt es Parkkosten oder Maut? Und wie viele Personen teilen
+die Kosten?
+
+Wenn wir alles im Kopf rechnen, können Fehler passieren. TankTeiler sammelt
+die wichtigen Angaben und zeigt die Rechnung Schritt für Schritt.
+
+======================================================================
+FOLIE 3 — SO FUNKTIONIERT TANKTEILER | etwa 1 Minute
+======================================================================
+
+Zuerst geben wir Start und Ziel ein. Wir können auch Zwischenstopps
+hinzufügen. Die Stopps lassen sich verschieben oder löschen.
+
+Dann tragen wir unser Auto ein. Wir geben den Namen, die Zahl der Sitzplätze,
+den Verbrauch und den Treibstoff ein. Die App speichert diese Angaben in
+diesem Browser.
+
+Danach geben wir den Treibstoffpreis und die Zahl der Personen ein. Parken
+und Maut können wir als Kosten für die ganze Fahrt eintragen. Die App teilt
+die Gesamtkosten durch die Zahl der Personen.
+
+======================================================================
+FOLIE 4 — DIE APP ZEIGEN | etwa 2 Minuten — LIVE-DEMO
+======================================================================
+
+Hier sehen Sie die App. Ich suche einen Start und ein Ziel. Ich kann die Orte
+auch auf der Karte auswählen. Die Markierungen kann ich verschieben.
+
+Jetzt füge ich einen Zwischenstopp hinzu. Ich kann ihn auch an eine andere
+Stelle setzen oder wieder löschen.
+
+Im Bereich „Auto“ trage ich ein Auto ein. Ich gebe zum Beispiel den
+Verbrauch und die Zahl der Sitzplätze ein und speichere das Auto.
+
+Bei den Fahrtkosten sehen wir die Strecke, den Treibstoffpreis, Parkkosten
+und Maut. Die Maut gebe ich als Gesamtpreis für die Fahrt ein. Auch wenn ich
+„Hin und zurück“ auswähle, wird die Maut nicht automatisch verdoppelt.
+Nur die Treibstoffkosten werden dann für die doppelte Strecke berechnet.
+
+Das Ergebnis zeigt die Gesamtkosten und den Preis pro Person. Jetzt ändere
+ich einen Stopp und zeige, wie sich die Strecke verändert.
+
+======================================================================
+FOLIE 5 — WAS PASSIERT IM HINTERGRUND? | etwa 1 Minute
+======================================================================
+
+Die App besteht aus drei einfachen Teilen.
+
+Erstens: Die Webseite zeigt die Karte, die Eingaben und das Ergebnis.
+Zweitens: Der Browser speichert das eigene Auto. Andere Besucher sehen diese
+Daten nicht.
+Drittens: Ein kleiner Server holt die Treibstoffpreise und gibt die
+Google-Maps-Einstellungen an die Webseite weiter.
+
+Google Maps liefert die Karte und die Route. TankTeiler rechnet selbst die
+Kosten aus.
+
+======================================================================
+FOLIE 6 — SO RECHNET DIE APP | etwa 1 Minute
+======================================================================
+
+Ein Beispiel: Das Auto fährt 100 Kilometer. Es braucht 6 Liter pro 100
+Kilometer. Ein Liter kostet 2 Franken. Dann kostet der Treibstoff 12 Franken.
+
+Dazu kommen zum Beispiel 9 Franken fürs Parken und 6 Franken Maut. Zusammen
+sind das 27 Franken. Bei drei Personen zahlt jede Person 9 Franken.
+
+Bei einer Fahrt hin und zurück berechnet die App doppelt so viel Treibstoff.
+Parkkosten und Maut bleiben so, wie wir sie eingegeben haben. Sie gelten für
+die ganze Fahrt.
+
+Das Ergebnis ist eine Schätzung. Andere Kosten, zum Beispiel besondere
+Gebühren, sind nicht automatisch dabei.
+
+======================================================================
+FOLIE 7 — WAS MACHT GOOGLE MAPS? | etwa 1,5 Minuten
+======================================================================
+
+Eine API ist eine Verbindung zwischen zwei Programmen. Ein Programm kann
+eine Frage senden. Das andere Programm kann eine Antwort zurückgeben.
+
+Wenn wir einen Ort suchen, fragt die App Google Maps nach diesem Ort. Google
+gibt Koordinaten zurück. Koordinaten sind Zahlen, die einen Punkt auf der
+Karte zeigen.
+
+Für die Route sendet die App den Start, das Ziel und alle Stopps an die
+Routes API. Sie sagt auch: Die Fahrt ist mit dem Auto. Google gibt die
+Entfernung und die Punkte der Route zurück. Die App zeigt diese Linie auf
+der Karte.
+
+Google Maps berechnet also die Route. Die Kosten berechnet TankTeiler selbst.
+Der Schlüssel für Google Maps ist auf die erlaubte Webseite und die
+benötigten Dienste begrenzt.
+
+======================================================================
+FOLIE 8 — SPEICHERN UND VERÖFFENTLICHEN | etwa 1 Minute
+======================================================================
+
+Die Daten vom Auto bleiben im Browser auf dem eigenen Gerät. Wenn wir die
+Daten der Webseite löschen, kann auch das gespeicherte Auto verschwinden.
+
+Für die Veröffentlichung nutze ich Render. TankTeiler braucht neben der
+Webseite auch einen kleinen Server. GitHub Pages kann eine einfache Webseite
+zeigen, aber keinen solchen Server starten. Render kann beides gemeinsam
+betreiben.
+
+Ich nutze den kostenlosen Render-Tarif. Nach einer längeren Pause kann der
+Server kurz schlafen. Beim ersten Aufruf muss er dann erst wieder starten.
+
+======================================================================
+FOLIE 9 — ABSCHLUSS | etwa 30 Sekunden
+======================================================================
+
+TankTeiler macht die Kosten einer gemeinsamen Fahrt leichter verständlich.
+Die App zeigt, woher die Kosten kommen und wie viel jede Person bezahlt.
+
+Vielen Dank fürs Zuhören. Sie können den QR-Code scannen und die App selbst
+ausprobieren.

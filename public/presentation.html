@@ -70,7 +70,7 @@
         <article class="flow-step"><span class="step-index">03</span><div class="flow-icon green">÷</div><h3>Kosten teilen</h3><p>Die Gesamtkosten werden durch die Personen geteilt.</p></article>
       </div>
       <div class="formula-card">
-        <div><span class="formula-label">DIE IDEE HINTER DER RECHNUNG</span><p><strong>Kilometer</strong> × Verbrauch ÷ 100 × Preis pro Liter <span>= Treibstoffkosten</span><br>(Treibstoffkosten + Parken) ÷ Personen = Anteil pro Person</p></div>
+        <div><span class="formula-label">DIE RECHNUNG</span><p><strong>Strecke</strong> × Verbrauch ÷ 100 × Preis pro Liter = Treibstoff<br>(Treibstoff + Parken + Maut) ÷ Personen = Anteil pro Person</p></div>
       </div>
     </section>
 
@@ -84,7 +84,7 @@
           <div class="demo-input"><span class="demo-pin pin-stop">1</span><span>Zwischenstopp hinzufügen</span><span class="checkmark">↕</span></div>
           <div class="demo-input"><span class="demo-pin pin-b">B</span><span>Luzern, Schweiz</span><span class="checkmark">✓</span></div>
           <div class="demo-options"><span>Auto <b>VW Golf 1.5 TSI</b></span><span>Mitfahrende <b>3 Personen</b></span></div>
-          <div class="demo-total"><small>UNGEFÄHR PRO PERSON</small><strong>CHF 14.40</strong><span>Treibstoff CHF 34.20 + Parken CHF 9.00 · geteilt durch 3</span></div>
+          <div class="demo-total"><small>UNGEFÄHR PRO PERSON</small><strong>CHF 16.40</strong><span>Treibstoff CHF 34.20 + Parken CHF 9.00 + Maut CHF 6.00 · geteilt durch 3</span></div>
         </div>
         <div class="demo-notes">
           <div class="note"><span class="note-dot blue-dot"></span><div><strong>Stopps anpassen</strong><p>Zwischenstopps hinzufügen und neu ordnen.</p></div></div>
@@ -110,7 +110,7 @@
 
     <section class="slide" aria-label="Ein Blick in den Code">
       <div class="section-head">      <p class="eyebrow">05 — RECHNUNG</p><h2>So werden die Kosten berechnet</h2>
-        <p class="section-lead">Die Anwendung fragt erst die Route ab und rechnet anschließend mit den passenden Fahrzeugdaten.</p></div>
+        <p class="section-lead">Die Anwendung fragt erst die Route ab und rechnet danach mit den passenden Fahrzeugdaten.</p></div>
       <div class="code-grid">
         <article class="code-card"><div class="code-header"><span class="code-lights"><i></i><i></i><i></i></span><span>ROUTE ANFRAGEN</span><span class="code-language">JavaScript</span></div>
           <pre><code><span class="code-purple">const</span> { routes } =
@@ -128,7 +128,7 @@
   kilometer * verbrauch / <span class="code-orange">100</span>;
 
 <span class="code-purple">const</span> gesamt =
-  liter * preisProLiter + parkKosten;
+  liter * preisProLiter + parkKosten + mautKosten;
 
 <span class="code-purple">const</span> proPerson =
   Math.<span class="code-yellow">ceil</span>(gesamt / personen);</code></pre>
@@ -146,9 +146,7 @@
         <article class="api-step"><span class="api-index">02</span><div class="api-icon route-api-icon">↗</div><div><h3>Route berechnen</h3><p>Start, Ziel und Stopps liefern Entfernung und Routenlinie.</p></div><div class="api-data"><span>Wegpunkte</span><b>→</b><span>Distanz + Linie</span></div></article>
         <article class="api-step"><span class="api-index">03</span><div class="api-icon result-api-icon">✓</div><div><h3>Ergebnis anzeigen</h3><p>TankTeiler zeigt die Route und berechnet den Anteil pro Person.</p></div><div class="api-data"><span>Routendaten</span><b>→</b><span>Kostenanteil</span></div></article>
       </div>
-      <div class="api-bottom">
-        <aside class="api-key-note"><span class="key-icon">🔑</span><div><strong>Der Schlüssel wird eingeschränkt</strong><p>In Google Cloud ist festgelegt, welche Webseiten und APIs ihn nutzen dürfen. Der Schlüssel enthält keine Adressen.</p></div></aside>
-      </div>
+      <aside class="api-key-note"><span class="key-icon">🔑</span><div><strong>Der Schlüssel wird eingeschränkt</strong><p>In Google Cloud ist festgelegt, welche Webseiten und APIs ihn nutzen dürfen. Der Schlüssel enthält keine Adressen.</p></div></aside>
     </section>
 
     <section class="slide" aria-label="Zuverlässigkeit und Datenschutz">

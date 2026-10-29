@@ -9,7 +9,8 @@ app.use(express.json());
 const publicDir = path.join(__dirname, 'public');
 app.get('/presentation.html', (req, res) => res.redirect(301, '/presentation'));
 app.get('/presentation', (req, res) => res.sendFile(path.join(publicDir, 'presentation.html')));
-app.get('/speech', (req, res) => res.download(path.join(publicDir, 'Praesentation-Redetext-DE-RU.txt')));
+app.get('/speech', (req, res) => res.download(path.join(publicDir, 'Vortragstext-DE.txt')));
+app.get('/api-guide', (req, res) => res.download(path.join(publicDir, 'API-Erklaerung-RU.txt')));
 app.use(express.static(publicDir));
 
 // ---------- Benzinpreise von TCS holen (Web-Scraping) ----------
